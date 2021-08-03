@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">StockWatch</string>
+    <string name="total_gain">Total Gain</string>
+    <string name="Total_Gain_0">0$ (0%)</string>
+    <string name="search">Search</string>
+    <string name="holdings">Holdings</string>
+    <string name="Day_Gain_0">0$ (0%)</string>
+    <string name="day_s_gain">Day\'s Gain</string>
+    <string name="AppName">StockWatch</string>
+</resources>

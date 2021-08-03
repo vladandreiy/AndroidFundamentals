@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DisplayStockActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/StockInfoCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/medium_margin">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/StockSymbolTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/small_margin"
+                    android:text="StockTicker"
+                    android:textColor="@color/material_light_primary_text"
+                    android:textSize="@dimen/medium_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/StockNameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/StockSymbolTV"
+                    android:layout_marginLeft="@dimen/small_margin"
+                    android:text="StockName"
+                    android:textSize="@dimen/small_text_size" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/StockInfoCard">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.jjoe64.graphview.GraphView
+                    android:id="@+id/StockGraph"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dip"
+                    android:layout_margin="@dimen/medium_margin" />
+
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:id="@+id/IntervalTB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/StockGraph"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    app:checkedButton="@+id/button5m"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button1m"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_width="64dp"
+                        android:textSize="13sp"
+                        android:layout_height="wrap_content"
+                        android:text="1m" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button2m"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_width="63dp"
+                        android:textSize="13sp"
+                        android:layout_height="wrap_content"
+                        android:text="2m" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button5m"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_width="63dp"
+                        android:textSize="13sp"
+                        android:layout_height="wrap_content"
+                        android:text="5m" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button15m"
+                        android:textSize="13sp"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_width="63dp"
+                        android:layout_height="wrap_content"
+                        android:text="15m" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button1h"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_width="63dp"
+                        android:textSize="13sp"
+                        android:layout_height="wrap_content"
+                        android:text="1h" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button1d"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:textSize="13sp"
+                        android:layout_width="63dp"
+                        android:layout_height="wrap_content"
+                        android:text="1d" />
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</ScrollView>

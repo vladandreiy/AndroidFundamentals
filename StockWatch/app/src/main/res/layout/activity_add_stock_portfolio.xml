@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:padding="24dp"
+    tools:context=".AddStockPortfolioActivity">
+
+    <TextView
+        android:id="@+id/Description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Add a Stock to your Portfolio"
+        android:textSize="@dimen/medium_text_size" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TickerField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Description"
+        android:layout_margin="10dp"
+        app:startIconDrawable="@drawable/ic_baseline_graph"
+        android:hint="Stock Symbol">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Ticker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/PriceField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TickerField"
+        android:layout_margin="10dp"
+        app:startIconDrawable="@drawable/ic_baseline_money"
+        android:hint="Price">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/SharesField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/PriceField"
+        app:startIconDrawable="@drawable/ic_baseline_info_24"
+        android:layout_margin="10dp"
+        android:hint="Shares">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Shares"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/DateField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/SharesField"
+        app:startIconDrawable="@drawable/ic_baseline_calendar_today_24"
+        android:layout_margin="10dp"
+        android:hint="Date Bought">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/DatePick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addButton"
+        style="@style/Widget.Stocks.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/DateField"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:onClick="addStockToPortfolio"
+        android:text="ADD" />
+
+</RelativeLayout>
